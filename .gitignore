@@ -1,5 +1,6 @@
 set-env-alex.sh
 nnUNet_preprocessed/
+nnUNet_raw/Dataset200_Nano/.DS_Store
 nnUNet_raw/Dataset200_Nano/imagesTr
 nnUNet_raw/Dataset200_Nano/LabelsTr
 nnUNet_results/

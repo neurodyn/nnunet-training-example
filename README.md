@@ -1,7 +1,7 @@
 
 # Training NNUNET V2 on an old Windows PC
 
-I'm using WSL on a Windows 11 PC. So let's try the method described here:
+I'm using WSL on a Windows 11 PC, so let's try the method described here:
 
 https://docs.nvidia.com/cuda/wsl-user-guide/index.html
 
