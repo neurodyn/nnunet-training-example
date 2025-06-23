@@ -42,6 +42,22 @@ at the bash prompt.
 
 Follow: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how_to_use_nnunet.md
 
+# Dataset
+
+Prepare images and their segmentations. The dataset goes into the folder 'nnUNet_raw'. Give it a number and a suffix, e.g. Dataset200_Nano.
+One subfolder holds the images: '/nnUNet_raw/Dataset200_Nano/imagesTr'. Another subfolder holds the labels: '/nnUNet_raw/Dataset200_Nano/labelsTr'.
+
+Images should be split by channel and have a consistent naming and numerical index.
+E.g. BRATS_0_0000.tif, BRATS_1_0000.tif, BRATS_2_0000.tif, BRATS_0_0001.tif, BRATS_1_0001.tif, BRATS_2_0001.tif... for three channel images. 
+
+Labels are a single channel: BRATS_0.tif, BRATS_1.tif ...
+
+Prepare a .json file for the data. E.g. (single channel):
+```
+{"channel_names": {"0": "CT"}, "labels": {"background": 0, "PZ": 1}, "numTraining": 3488, "file_ending": ".tif"}
+```
+# Run the training
+
 1)
 ```
 nnUNetv2_plan_and_preprocess -d DATASET_ID --verify_dataset_integrity
@@ -82,7 +98,11 @@ INFO: Configuration 3d_fullres not found in plans file nnUNetPlans.json of datas
 Configuration: 3d_lowres...
 INFO: Configuration 3d_lowres not found in plans file nnUNetPlans.json of dataset Dataset200_Nano. Skipping.
 ```
-2) Now we will train a 2D U-Net. We will specify this as the first fold. Syntax: nnUNetv2_train DATASET_NAME_OR_ID 2d FOLD [--npz]
+2) Now we will train a 2D U-Net. We will specify this as the first fold. Syntax:
+
+nnUNetv2_train DATASET_NAME_OR_ID 2d FOLD [--npz]
+
+
 ```
 nnUNetv2_train 200 2d 0 --npz
 ```
@@ -193,3 +213,5 @@ softmax.
 2025-06-23 16:34:10.204829: Epoch time: 293.48 s
 2025-06-23 16:34:10.218703: Yayy! New best EMA pseudo Dice: 0.1860000044107437
 ```
+
+OK, not perfect but that's working!
