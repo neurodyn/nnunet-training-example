@@ -1,6 +1,6 @@
 set-env-alex.sh
 nnUNet_preprocessed/
-nnUNet_raw/Dataset200_NanoTracerTiny/imagesTr
-nnUNet_raw/Dataset200_NanoTracerTiny/LabelsTr
+nnUNet_raw/Dataset200_Nano/imagesTr
+nnUNet_raw/Dataset200_Nano/LabelsTr
 nnUNet_results/
 nnUNet_raw/Dataset200_NanoTracerTiny.zip
