@@ -12,7 +12,7 @@ https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&D
 
 Create and activate a conda environment:
 ```
-conda activate nnunet_p3102
+conda activate nnunet
 ```
 
 The machine has CUDA 12.2 which isn't listed on the PyTorch website https://pytorch.org/get-started/locally/. But we can try the pytorch installation from:
