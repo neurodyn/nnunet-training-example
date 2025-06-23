@@ -54,7 +54,7 @@ nnUNetv2_plan_and_preprocess -d 200 --verify_dataset_integrity
 Output:
 ```
 Fingerprint extraction...
-Dataset200_NanoTracerTiny
+Dataset200_Nano
 Using <class 'nnunetv2.imageio.natural_image_reader_writer.NaturalImage2DIO'> as reader/writer
 
 ####################
@@ -75,7 +75,7 @@ INFO: You are using the old nnU-Net default planner. We have updated our recomme
 Using <class 'nnunetv2.imageio.natural_image_reader_writer.NaturalImage2DIO'> as reader/writer
 Plans were saved to /path/to/nnunet/nnUNet_preprocessed/Dataset200_Nano/nnUNetPlans.json
 Preprocessing...
-Preprocessing dataset Dataset200_NanoTracerTiny
+Preprocessing dataset Dataset200_Nano
 Configuration: 2d...
 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3488/3488 [01:13<00:00, 47.18it/s]Configuration: 3d_fullres...
 INFO: Configuration 3d_fullres not found in plans file nnUNetPlans.json of dataset Dataset200_Nano. Skipping.
@@ -144,7 +144,7 @@ Configuration name: 2d
 True}                                                                                                                                      opout_op', 'nonli
 
 These are the global plan.json settings:
- {'dataset_name': 'Dataset200_NanoTracerTiny', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [999.0, 1.0, 1.0], 'original_median_shape_after_transp': [1, 500, 500], 'image_reader_writer': 'NaturalImage2DIO', 'transpose_forward': [0, 1, 2], 'transpose_backginal_median_shapward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_cha 'experiment_plannnel': {'0': {'max': 4095.0, 'mean': 160.918681859126, 'median': 100.0, 'min': 49.0, 'percentile_00_5': 95.0, 'percentile_99_5': 1488.0, 's': 160.9186818591td': 208.2107709285002}}}
+ {'dataset_name': 'Dataset200_Nano', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [999.0, 1.0, 1.0], 'original_median_shape_after_transp': [1, 500, 500], 'image_reader_writer': 'NaturalImage2DIO', 'transpose_forward': [0, 1, 2], 'transpose_backginal_median_shapward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_cha 'experiment_plannnel': {'0': {'max': 4095.0, 'mean': 160.918681859126, 'median': 100.0, 'min': 49.0, 'percentile_00_5': 95.0, 'percentile_99_5': 1488.0, 's': 160.9186818591td': 208.2107709285002}}}
 
 2025-06-23 16:21:54.137305: Unable to plot network architecture: nnUNet_compile is enabled!
 2025-06-23 16:21:54.153713: 
