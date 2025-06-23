@@ -73,14 +73,14 @@ INFO: You are using the old nnU-Net default planner. We have updated our recomme
 {'data_identifier': 'nnUNetPlans_2d', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 12, 'patch_size': (512, 512), 'median_image_size_in_voxels': array([500., 500.]), 'spacing': array([1., 1.]), 'normalization_schemes': ['CTNormalization'], 'use_mask_for_norm': [False], 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'architecture': {'network_class_name': 'dynamic_network_architectures.architectures.unet.PlainConvUNet', 'arch_kwargs': {'n_stages': 8, 'features_per_stage': (32, 64, 128, 256, 512, 512, 512, 512), 'conv_op': 'torch.nn.modules.conv.Conv2d', 'kernel_sizes': ((3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3)), 'strides': ((1, 1), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2), (2, 2)), 'n_conv_per_stage': (2, 2, 2, 2, 2, 2, 2, 2), 'n_conv_per_stage_decoder': (2, 2, 2, 2, 2, 2, 2), 'conv_bias': True, 'norm_op': 'torch.nn.modules.instancenorm.InstanceNorm2d', 'norm_op_kwargs': {'eps': 1e-05, 'affine': True}, 'dropout_op': None, 'dropout_op_kwargs': None, 'nonlin': 'torch.nn.LeakyReLU', 'nonlin_kwargs': {'inplace': True}}, '_kw_requires_import': ('conv_op', 'norm_op', 'dropout_op', 'nonlin')}, 'batch_dice': True}
 
 Using <class 'nnunetv2.imageio.natural_image_reader_writer.NaturalImage2DIO'> as reader/writer
-Plans were saved to /mnt/g/awoo016/training/nnunet/nnUNet_preprocessed/Dataset200_NanoTracerTiny/nnUNetPlans.json
+Plans were saved to /path/to/nnunet/nnUNet_preprocessed/Dataset200_Nano/nnUNetPlans.json
 Preprocessing...
 Preprocessing dataset Dataset200_NanoTracerTiny
 Configuration: 2d...
 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3488/3488 [01:13<00:00, 47.18it/s]Configuration: 3d_fullres...
-INFO: Configuration 3d_fullres not found in plans file nnUNetPlans.json of dataset Dataset200_NanoTracerTiny. Skipping.
+INFO: Configuration 3d_fullres not found in plans file nnUNetPlans.json of dataset Dataset200_Nano. Skipping.
 Configuration: 3d_lowres...
-INFO: Configuration 3d_lowres not found in plans file nnUNetPlans.json of dataset Dataset200_NanoTracerTiny. Skipping.
+INFO: Configuration 3d_lowres not found in plans file nnUNetPlans.json of dataset Dataset200_Nano. Skipping.
 ```
 2) Now we will train a 2D U-Net. We will specify this as the first fold. Syntax: nnUNetv2_train DATASET_NAME_OR_ID 2d FOLD [--npz]
 ```
@@ -131,7 +131,7 @@ Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021
 
 2025-06-23 16:20:48.433895: Using torch.compile...
 2025-06-23 16:20:49.701162: do_dummy_2d_data_aug: False
-2025-06-23 16:20:49.728989: Using splits from existing split file: /mnt/g/awoo016/training/nnunet/nnUNet_preprocessed/Dataset200_NanoTracerTiny/splits_final.json
+2025-06-23 16:20:49.728989: Using splits from existing split file: /path/to/nnunet/nnUNet_preprocessed/Dataset200_Nano/splits_final.json
 2025-06-23 16:20:49.740389: The split file contains 5 splits.
 2025-06-23 16:20:49.745311: Desired fold for training: 0
 2025-06-23 16:20:49.755418: This split has 2790 training and 698 validation cases.
